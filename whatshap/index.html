@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ichat- realtime node socket.io</title>
+    <script src="js/client.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="data:image/jpeg;base64,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" alt="ravi" width="200px" height="200px">
+    </nav>
+    <div class="container">
+        <div class="message right">Ravi:Hey how are you?</div>
+        <div class="message left">Rohan:bhai I am fine. how about you</div>
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
